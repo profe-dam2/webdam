@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Mi Aplicación</title>
+    <style>
+        /* Mantenemos la misma línea estética que la página de login */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Tarjeta principal */
+        .home-card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            padding: 50px;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .home-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Icono o logo (opcional) */
+        .logo {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: #667eea;
+        }
+
+        /* Título principal */
+        h1 {
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: 600;
+            font-size: 32px;
+        }
+
+        /* Subtítulo o descripción */
+        .description {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        /* Características o beneficios (para dar más contenido) */
+        .features {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            gap: 20px;
+        }
+
+        .feature {
+            flex: 1;
+            padding: 20px 10px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e9ecf2 100%);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .feature-icon {
+            font-size: 30px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .feature h3 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .feature p {
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* Botón estilizado */
+        .btn-login {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: opacity 0.3s, transform 0.2s, box-shadow 0.3s;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+            margin-top: 20px;
+        }
+
+        .btn-login:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+        }
+
+        .btn-login:active {
+            transform: scale(0.98);
+        }
+
+        /* Texto secundario */
+        .footer-text {
+            margin-top: 30px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .footer-text a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .footer-text a:hover {
+            text-decoration: underline;
+        }
+
+        /* Para dispositivos móviles */
+        @media (max-width: 480px) {
+            .home-card {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            .features {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn-login {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="home-card">
+        <!-- Emoji como logo (puedes cambiarlo por una imagen si prefieres) -->
+        <div class="logo"></div>
+
+        <h1>Bienvenido a MiApp</h1>
+
+        <p class="description">
+            La plataforma que te ayuda a gestionar tus proyectos de manera sencilla,
+            rápida y eficiente. Únete a miles de usuarios que ya confían en nosotros.
+        </p>
+
+        <!-- Pequeña sección de características para darle vida a la home -->
+        <div class="features">
+            <div class="feature">
+                <span class="feature-icon">⚡</span>
+                <h3>Rápido</h3>
+                <p>Procesamiento en tiempo real</p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">🔒</span>
+                <h3>Seguro</h3>
+                <p>Tus datos protegidos</p>
+            </div>
+            <div class="feature">
+                <span class="feature-icon">📱</span>
+                <h3>Accesible</h3>
+                <p>Desde cualquier dispositivo</p>
+            </div>
+        </div>
+
+        <!-- Botón que lleva al formulario de login -->
+        <a href="/form_login" class="btn-login">Iniciar Sesión</a>
+
+        <!-- Mensaje opcional para nuevos usuarios -->
+        <p class="footer-text">
+            ¿No tienes una cuenta? <a href="/registro">Regístrate aquí</a>
+        </p>
+    </div>
+</body>
+</html>
